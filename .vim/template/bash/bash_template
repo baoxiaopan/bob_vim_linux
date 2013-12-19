@@ -1,0 +1,57 @@
+#!/bin/bash
+#
+# This is a auto-generation bash template when you creating a new bash script...
+# If you don't need it, pls remove the contents bellow...
+#
+# Author: Bob (xiaopan.baoxp@alibaba-inc.com)
+#
+# :
+#
+# I. Function:
+#     1. 
+#     2. 
+#     3. 
+#     4. 
+#
+# Machine: 
+#       10.
+#
+# Parameter: 
+#
+
+#----------------------------------------
+# Preparation
+#----------------------------------------
+# {{{usage
+usage()
+{
+    yellow "\n${pink}Usage: ${blue}$0 ${green}<...>\n"
+    yellow "\t<...>: ${brown}\n"
+    yellow "\tcmd e.g: ${brown}${blue}$0 ${green}...\n"
+    yellow "\n"
+    exit 1
+}
+#----------------------------------------
+# }}}
+
+
+#----------------------------------------
+# Preparation
+#----------------------------------------
+# {{{
+basedir=`dirname $0`
+loglib="$basedir/../../../libs/logdotsh/log.sh"
+[ -f $loglib ] && source $loglib
+
+[ "$1" = "help" -o "$1" = "-help" -o "$1" = "--help" -o "$1" = "-h" ] && usage
+[ $# -lt 1 ] && usage
+
+BASE_BIN_DIR=`dirname $0`
+if [[ "$BASE_BIN_DIR" =~ "^/.*" ]]; then
+    info_msg "\nBASE_BIN_DIR is: $BASE_BIN_DIR\n"
+else
+    exit_msg "\nERROR: \tYou must use a [ABSOLUTE PATH] to run the scripts\n"
+fi
+#----------------------------------------
+# }}}
+
