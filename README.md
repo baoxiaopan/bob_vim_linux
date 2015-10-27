@@ -18,3 +18,7 @@ Then excute:
     Launch vim and run :PluginInstall
 
     To install from command line: vim +PluginInstall +qall
+
+### Sketch
+![After Apply](vim.png "After Apply")
+
